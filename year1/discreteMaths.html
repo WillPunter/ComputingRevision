@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Revision Website</title>
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    
+    <body>
+        <h1>Discrete Maths</h1>
+        
+        <h2>1 - Proofs</h2>
+        <h3>Introduction</h3>
+        <p>A statement is an expression that is either true or false.</p>
+        <p>A proof is a series of precise interlinked steps that show the truth of a statement. All the steps in between must be true. Proofs should be written in prose, rather than in symbols and equations.</p>
+        
+        <h3>Statements in Proofs</h3>
+        <p>In these notes, we will use a fixed number of statements to write our proofs. These are detailed below. Let P and Q be arbitrary statements, then:</p>
+        <ul>
+            <li>"P and Q" - this statement is true if both P and Q are true</li>
+            <li>"P or Q" - this statement is true if P is true, if Q is true or if both are true</li>
+            <li>"not P" - this statement is true if P is not true</li>
+            <li>"if P then Q", "P implies Q" - these statements both say the same thing, that when P is true, Q is also true. It does not say anything about Q when P is false, i.e. when P is false, Q can be true or false</li>
+            <li>"P if and only if Q", "P iff Q" - these statements both say the same thing, and can be written as "P implies Q and Q implies P", which can be resolved using the above statements.</li>
+            <li>"for all x, P(x)" - this statement is true if for any (i.e. an arbitrary) x, P(x) is true</li>
+            <li>"there exists x such that P(x)" - this statement is true if there is at least one x such that P(x) is true</li>
+        </ul>
+        
+        <h3>Steps in Proofs</h3>
+        <p>To ensure that other people can understand our proofs, and that our proofs are sufficiently precise, we will only use the following proof steps in these notes:</p>
+        <ul>
+            <li>Assumption - </li>
+            <li>showing "and" - to show "P and Q", we simply just have to show that P and Q are both true</li>
+            <li>using "and" - if "P and Q" is true, then we know P and Q are true individually</li>
+            <li>showing "or" - to show "P or Q", we simply just have to show that one of P or Q is true (we can show both but this is not necessary)</li>
+            <li>using "or" - we can use statements of the form "P or Q" to carry out proof by cases. Suppose we want to show "R" is true when "P or Q" is true. We would first consider the case when P is true, and show that R is true when P is true. We would then consider the case when Q is true, and show R is true when Q is true. Since either P or Q or both are true, R must be true</li>
+            <li>showing "not" - to show "not P" we must first assume P and then reach a contradiction, meaning that it is not possible for P to be true</li>
+            <li>using "not" - if "not P" is true, then we can not consider "P" true, but can consider "not P" to be true</li>
+            <li>showing "P implies Q" - to show a statement of the form "P implies Q" or "if P then Q", we assume P is true and then show that Q is true under this assumption. Note that P does not need to be true - we are trying to prove that Q is true whenever P is true, not that P is true.</li>
+            <li>using "P implies Q" - if "P implies Q" holds and P is true, then Q is true</li>
+            <li>showing "for all x, P(x)" - to show "for all x, P(x)", we assume an arbitrary x and show that P(x) holds for an arbitrary x. Since x is arbitrary, it is true that "for all x, P(x)"</li>
+            <li>using "for all x, P(x)" - if we have a known or arbitrary x, we know that P(x) holds, so can use P(x) in our proofs</li>
+            <li>showing "there exists x such that P(x)" - to prove "there exists x such that P(x)" we simply have to provide a specific or general x such that P(x)</li>
+            <li>using "there exists x such that P(x)" - to use "there exists x such that P(x)", we can simply just set some object o to equal the x for which P(x) holds. We can do this even if we do not know that value of x for which P(x), since we know that sch an x exists</li>
+            <li>"proof by contradiction" - proof by contradiction is used to show a statement, "P" by assuming "not P" and finding a contradiction meaning that "not P" cannot hold. Note that this is not looked upon favourably by many mathematicians, so proof by contradiction should be avoided by possible. To avoid confusion, note that proof by contradiction takes the form: "assume not P" ... "contradiction" ... "therefore P", whereas proofs of the type "showing not" take the following form: "assume P" ... "contradiction" ... "therefore not P"</li>
+            <li>"law of excluded middle" - the law of excluded middle states that statements are either true or false - they must be one or the other but not both. The law of excluded middle can be used to show that statements of the form "P or not P" are always true, and that statements of the form "P and not P" are always false</li>
+            <li>"from a contradiction, anything follows" - if we reach a contradiction in our argument when not using "showing not" or "proof by contradiction", it means that the assumptions we have made cannot be true. Therefore, we can assume whatever we want after this to prove our statement, since the assumptions required for it cannot be true anyway. This is most common in proof by cases, where one of the cases will contradict one of the assumptions necessary for the proof. If this occurs, then the specific case is not logically possible, so can be ignored (we formally do this by assuming whatever statement we need to show to be true in the contradictory case).</li>
+        </ul>
+        
+        <p>Note that proofs are structured mathematical reasoning, and should be written using words where possible, for maximum clarity.</p>
+        
+        <h3>About Proof by Contradiction</h3>
+        <p>Proof by contradiction relies upon the law of excluded middle. The law of excluded middle is not always looked upon favourably by mathematicians because in some branches of mathematics it is not true to say "not True = False", and therefore it is not always true to say "not not True = False". Hence, the law of excluded middle is not always considered true in some branches of mathematics. That being said, much of our understanding of modern mathematics relies upon proof by contradiction, so it is not at all one-sided. For the purposes of this course, it is best to avoid proof by contradiction wherever possible.</p>
+        <p>Another reason to avoid proof by contradiction is that it is easy to make mistakes, for example, it is a common mistake to write a direct proof for the statement within a proof by contradiction. This yields the contradiction unnecessary.</p>
+        
+        <h3>Example Proofs</h3>
+        <p>TODO - add example proofs</p>
+        
+        <h2>2 - Sets</h2>
+        <h3>Introduction</h3>
+        <p>Set Theory was first proposed by Georg Cantor. He defined as set as a collection of mathematical objects.</p>
+        <p>The objects inside a set are called the elements of a set. We can say that some object, \(x\) is an element of a set \(S\) using the notation \(x \in S\).</p>
+        <p>We can define a set by listing all of its elements between curly brackets, such as the following: \(S = \{a, b, c\}\)</p>
+        <p>We can also define a set using a comprehension - this allows us to express infinite sets, e.g. \(\{x | x^2 &lt; 100\}\) describes the set of all numbers that, when squared, are less than 100.</p>
+        <p>The elements of sets do not have to be numbers - they can be any mathematical object, and therefore any thing that exists within the context of the problem being solved / described. E.g. you could have the following set \(cities = \{London, Bristol, Brighton, Aberdeen, Glasgow, York\}\) if you were using the set to describe some cities in the UK.</p>
+        <p>Note that we represent the empty set with the symbol \(\emptyset\). This set does not contain any elements.</p>
+        
+        <h3>Russel's Paradox</h3>
+        <p>Bertrand Russel showed that Cantor's Set Theory contained contradictions. By doing this, he showed that not every collection of mathematical objects is a set.</p>
+        <p>Theorem: the collection of objects \(R = \{X | X \notin X\}\) is not a set. We will prove this using Russel's Paradox. Since this is a proof of the form "showing not", we will start by assuming that there exists a set "\(R = \{X | X \notin X\}\)". Then, either "\(X \in X\)" or "\(X \notin X\)", so by step "using or", we have two cases. If "\(X \in X\)", then \(X\) is a set that contains itself, so by assumption "\(X \notin X\)", we reach a contradiction. In the case "\(X \notin X\)", we have "\(X \in X\)" because of the definition of the set. This is also a contradiction. Since we reach a contradiction in both cases, it cannot be true that \(\{X | X \notin X\}\) is a set, by step "showing not".</p>
+        <p>Russel's paradox lead to a more precise definition of a set. A set is a collection of mathematical objects taken from a larger mathematical set. We define the largest mathematical sets as axioms (i.e. they are assumed to be sets).</p>
+        <p>The axiomatic sets include:</p>
+        <ul>
+            <li>\(\mathbb{N}\) - the natural numbers (these are the counting numbers 1, 2, 3, ...). Note that we do not typically include 0.</li>
+            <li>\(\mathbb{Z}\) - the integers (these are the whole numbers ... -2, -1, 0, 1, 2, ... ).</li>
+            <li>\(\mathbb{Q}\) - the rational numbers (these are defined as the ratio of two integers, i.e. n / m for integers n and m).</li>
+            <li>\(\mathbb{R}\) - the real numbers (these include the rational and irrational numbers - i.e. any number that can be placed on a number line from negative to positive infinity).</li> 
+        </ul>
+        
+        <h3>Set Comparison</h3>
+        <p>We say that \(A\) is a subset of \(B\) if and only if all elements in \(A\) are also in \(B\). "\(A\) is a subset of \(B\)" can be written as \(A \subseteq B\). The definition of subset can be written symbollicaly as "\(\forall x \in A, x \in B\)".</p>
+        <p>Equality is defined between sets. We say that two sets, \(A\) and \(B\) are equal if and only if "\(A \subseteq B\) and \(B \subseteq A\)". Therefore, we can prove two sets are equal by showing that they are both subsets of one another.</p>
+        <p>We say that \(A\) is a strict subset of \(B\) if and only if \(A \subseteq B\) and \(A \neq B\).</p> 
+        
+        <h3>Set Constructors</h3>
+        <p>One way of constructing sets, as we have already looked at, is comprehension, where we specify a set as all the members of some larger set that satisfy a given logical property (also called a predicate): \(\{x \in A | P(x)\}\). Because of Russel's Paradox, it is necessary that \(A\) has already been established as a set for a set comprehension to be valid.</p>
+        <p>We can construct sets from other sets using the following operations:</p>
+        <ul>
+            <li>Set union (\(\cup\)) - "\(x \in A \cup B\)" is defined as "\(\{x | x \in A\) or \(x \in B\}\)"</li>
+            <li>Set intersect (\(\cap\)) - "\(x \in A \cap B\)" is defined as "\(\{x \in A \cup B | x \in A\) and \(x \in B\}\)"</li>
+            <li>Set difference (\(\backslash\)) - "\(x \in A \backslash B\)" is defined as "\(\{ x \in A \cup B | x \in A\) and not \(x \in B\}\)"</li>
+            <li>Symmetric Set Difference (\(\triangle\)) - "\(x \in A \triangle B\)" is defined as "\(\{x \in A \cup B | (x \in A\) and not \(x \in B\)) or (\(x \in B\) and not \(x \in A)\}\)"</li>
+        </ul>
+        <p>Note that we define \(A \cup B\) as a set - i.e. we cannot prove that it is a set so we assume it to be a set. All the other set constructors specified are not assumed, but are derived from the set \(A \cup B\).</p>
+        <p>We say two sets, \(A\) and \(B\) are disjoint if \(A \cap B = \emptyset\)</p>
+        
+        <h3>Set Properties</h3>
+        <p>The following are properties on sets. We will let \(A\), \(B\) and \(C\) be arbitrary sets.</p>
+        <ul>
+            <li>Idempotence: \(A \cup A = A\), \(A \cap A = A\)</li>
+            <li>Commutativity: \(A \cup B = B \cup A\), \(A \cap B = B \cap A\), \(A \triangle B = B \triangle A\)</li>
+            <li>Associativity: \(A \cup (B \cup C) = (A \cup B) \cup C\), \(A \cap (B \cap C) = (A \cap B) \cap C\)</li>
+            <li>Distributivity: \(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\), \((A \cap (B \cup C)) = (A \cap B) \cup (A \cap C)\)</li>
+            <li>Absorption: \(A \cup (A \cap B) = A\), \(A \cap (A \cup B) = A\)</li>
+            <li>Empty set: \(A \cup \emptyset = A\), \(A \cap \emptyset = \emptyset\)</li>
+        </ul>
+        
+        <p>The power set (\(\mathbb{P}\)) of a given set \(A\) is the set of all subsets of \(A\).</p>
+        <p>E.g. \(A = \{a, b\}\) \(\mathbb{P} A = \{\emptyset, \{a\}, \{b\}, \{a,b\}\}\)</p>
+        <p>For a set with \(n\) elements in, the power set will have \(2^n\)</p>
+        <p>The cardinality of a set, \(A\), is the number of elements in it. It is denoted with the following: \(|A|\).</p>
+        <p>E.g. \(A = \{1, 2, 3\}\), \(|A| = 3\)</p>
+        
+        <h3>Set Products</h3>
+        <p>The Cartesian product (\(\times\)) of two sets is the set of all ordered pairs produced from their individual elements.</p>
+        <p>For example, if \(A = \{1, 2\}\) and \(B = \{a, b, c\}\), then \(A \times B = \{\langle1, a\rangle, \langle1,b\rangle, \langle1,c\rangle, \langle2,a\rangle, \langle2,b\rangle, \langle2,c\rangle\}\)</p>
+        <p>Note that the product of two sets is not commutative, since the first element in each pair belongs to the set \(A\) and the second element belongs to the set \(B\)</p>
+        <p>We can take the product of more than two sets. This will simply produce the set of all possible n-tuples made from their elements.</p>
+        
+        <h3>Partitions and the Pigeonhole Principle</h3>
+        <p>For any set \(A\), a partition of \(A\) is a family \(A_1, A_2, ... A_n\) of subsets that fulfill the following:</p>
+        <ol>
+            <li>Each \(A_i\) is not empty - \(|A_i| &gt; 0\)</li>
+            <li>The \(A_i\) cover \(A\) - \(A = A_1 \cup A_2 \cup ... \cup A_n\)</li>
+            <li>The \(A_i\) are pairwise disjoint (i.e. they share no elements in common) - \(\forall i,j \in \mathbb{N}, (i,j \leq n\text{ and } i \neq j \Rightarrow \emptyset)\)</li>
+        </ol>
+        <p>The Pigeonhole Principle states that if a set of \(n\) objects is partitioned into \(k\) subsets, where \(0 &lt; k &lt; n\), then at least one subset must contain more than one element.</p>
+        <p>Proof of the Pigeonhole Principle: since this is a statement of type "if P then Q", we will start by assuming that "\(A\) is a set of \(n\) distinct objects, partitioned into \(k\) subsets where \(0 &lt; k &lt; n\)". We want to show "not every subset has one element", so assume "every subset has one element". Then, since all subsets in a partition are pairwise disjoint (\(A_i \cap A_j = \emptyset\)) and cover the set \(A\) entirely, it is true that \(|\cup A^{k}_{i=1}| = |A|\). Since each subset has only one element, \(\cup A^{k}_{i=1} = k\), so \(|A| = k\) where \(0 &lt; k &lt; n\). This is a contradiction, since we assumed \(|A| = n\). Therefore, our assumption "every subset has one element" cannot hold. Therefore, by step "showing not", we have show that "not every subset has one element", i.e. "at least one subset has at more than one element". Since this is all under the assumption that "\(A\) is a set of \(n\) distinct objects partitioned into \(k\) subsets where \(0 &lt k &lt n\)", we have shown by step "showing implies", "if \(A\) is a set of \(n\) distinct objects partitioned into \(k\) subsets where \(0 &lt; k &lt; n\), then at least one of the subsets has more than one element". This is the Pigeonhole Principle Q.E.D.</p>
+        
+        <h2>3 - Relations</h2>
+        <h3>Introduction</h3>
+        <h3>Relation Construction</h3>
+        <h3>Equivelance Relations and Classes</h3>
+        <h3>Transitive Closure</h3>
+        
+        <h2>Summary</h2>
+        <h3>Defintions</h3>
+        <h3>Theorems</h3>
+        <h3>Examples</h3>
+    </body>
+</html>
